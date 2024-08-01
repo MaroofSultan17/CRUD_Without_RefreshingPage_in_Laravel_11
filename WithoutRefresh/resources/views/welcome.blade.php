@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    {{-- Form for Uploading --}}
     <div class="container mt-4">
         <form class="w-50 mx-auto" action="{{ route('upload') }}" method="POST" id="addform"
             enctype="multipart/form-data">
@@ -26,7 +27,7 @@
                 <button type="submit" class="btn btn-primary w-50">Submit</button>
             </div>
         </form>
-
+        {{-- Form for updating --}}
         <form class="w-50 mx-auto d-none" action="{{ route('edit') }}" method="POST" id="editform"
             enctype="multipart/form-data">
             @csrf
@@ -66,8 +67,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <input type="hidden" name="id" value="{{ $record->id }}">
-                                    <button type="submit" class="btn btn-danger"
-                                        style="width:100px;">Delete</button>
+                                    <button type="submit" class="btn btn-danger" style="width:100px;">Delete</button>
                                 </form>
                                 <button class="btn btn-primary edit-btn" style="width:100px;"
                                     data-id="{{ $record->id }}" data-email="{{ $record->email }}">Edit</button>
