@@ -18,6 +18,6 @@ Route::put('/edit', [DataController::class, 'update'])->name('edit');
 Route::get('/blogs', [BlogController::class, 'index'])->name('blog.show');
 
 
-// Blogs Management
+// Blogs Management 
 Route::get('/admin', [AdminBlogController::class, 'index'])->name('dashboard');
 Route::post('/admin/store', [AdminBlogController::class, 'store'])->name('blog.store');
